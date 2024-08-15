@@ -1,0 +1,58 @@
+.rounds-list {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px solid #c58b2d;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #31210733;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #c58b2d;
+
+    &__item {
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+      padding: 15px;
+    }
+  }
+}
+
+.rounds-list-body {
+  &__round {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+    background-color: rgba(70, 56, 33, 0.2);
+    transition: background-color 0.25s;
+
+    &_id {
+      width: 100%;
+      text-align: center;
+    }
+
+    &_date {
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: rgba(181, 156, 57, 0.1);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #c58b2d;
+    }
+  }
+}
+
+.area-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  height: 200px;
+  overflow: hidden;
+}

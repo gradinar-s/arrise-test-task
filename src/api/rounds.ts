@@ -9,7 +9,9 @@ export const fetchRounds = async () => {
   }
 };
 
-export const fetchRound = async (id: number) => {
+export const fetchRound = async (id: number | null) => {
+  if (!id) return;
+
   try {
     const round = await axios.get(`/round/${id}`);
     return round.data;

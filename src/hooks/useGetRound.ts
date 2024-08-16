@@ -7,12 +7,12 @@ export interface RoundDetails {
   id: string;
 }
 
-export const useGetRound = (id: number) => {
-  const { isPending, data, error } = useQuery<RoundDetails>({
+export const useGetRound = (id: number | null) => {
+  const { isLoading, data, error } = useQuery<RoundDetails>({
     queryKey: ["round", id],
     queryFn: () => fetchRound(id),
     enabled: !!id,
   });
 
-  return { isLoadingRound: isPending, round: data, error };
+  return { isLoadingRound: isLoading, round: data, error };
 };

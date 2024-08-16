@@ -7,10 +7,10 @@ interface Round {
 }
 
 export const useGetRounds = () => {
-  const { isPending, data, error } = useQuery<Round[]>({
+  const { isLoading, data, error } = useQuery<Round[]>({
     queryKey: ["rounds"],
     queryFn: fetchRounds,
   });
 
-  return { isLoadingRounds: isPending, rounds: data, error };
+  return { isLoadingRounds: isLoading, rounds: data, error };
 };
